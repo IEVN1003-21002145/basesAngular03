@@ -1,0 +1,33 @@
+<form action="" class="container">
+    <div class="col-6">
+        <h1>Cinepolis</h1>
+        <div class="mb-3">
+            <div class="form-group pt-4">
+                <label for="">Nombre</label>
+                <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre" name="nombre">
+            </div>
+            <div class="form-group pt-4">
+                <label for="">Cantidad de compradores</label>
+                <input type="number" class="form-control" id="cantidadCompradores" [(ngModel)]="cantidadCompradores" name="cantidadCompradores">
+            </div>
+            <div class="form-group pt-4">
+                <label for="">Cantidad de boletos</label>
+                <input type="number" class="form-control" id="cantidadBoletos" [(ngModel)]="cantidadBoletos" name="cantidadBoletos">
+            </div>
+            <div class="form-group pt-4">
+                <label for="">Precio por boleto</label>
+                <p>{{precioBoleto}}</p>
+            </div>
+            <div class="col-6 pt-4">
+                <label for="">Tarjeta Cineco</label>
+                <input type="radio" name="tarjetaCineco" id="si" value="si" [(ngModel)]="tarjetaCineco"> Si
+                <input type="radio" name="tarjetaCineco" id="no" value="no" [(ngModel)]="tarjetaCineco"> No
+            </div>
+            <hr>
+            <button (click)="calcularTotal()" class="btn btn-light">Calcular Total</button>
+            <div class="col-6 pt-4">
+                <h2>El total a pagar es: {{totalPagar}}</h2>
+            </div>
+        </div>
+    </div>
+</form>
